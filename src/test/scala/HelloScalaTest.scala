@@ -6,7 +6,7 @@ class HelloScalaTest{
 	@Test
 	def greetThroughJavaTest(): Unit = {
 		val expectedGreeting = "hello scala"
-		assertEquals(expectedGreeting,HelloScala.greetThroughJava(expectedGreeting)
-	}	
+		assertEquals(expectedGreeting,HelloScala.greetThroughJava(expectedGreeting))
+	}
 }
 
