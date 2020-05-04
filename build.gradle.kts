@@ -33,7 +33,6 @@ tasks.jacocoTestReport {
 }
 
 
-
 tasks.named<Test>("test"){
     useJUnitPlatform()
 }
