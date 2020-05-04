@@ -1,8 +1,13 @@
 public class HelloSara {
+String greeting;
 
-   public static void main(String[] args) {
+public HelloSara(String greeting){
+        this.greeting = greeting;
+    }
 
-      System.out.println("hello sara");
+public String greet() {
+
+      return this.greeting;
 
    }
 }
