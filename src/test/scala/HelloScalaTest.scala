@@ -4,9 +4,9 @@ class HelloScalaTest{
 	import org.junit.jupiter.api.Test
 
 	@Test
-	def greetThroughJavaTest(): Unit = {
+	def greetingsThroughJavaTest(): Unit = {
 		val expectedGreeting = "hello scala"
-		assertEquals(expectedGreeting,HelloScala.greetThroughJava(expectedGreeting))
+		assertEquals(expectedGreeting,HelloScala.greetingsThroughJava(expectedGreeting))
 	}
 }
 
