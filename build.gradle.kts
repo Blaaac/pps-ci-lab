@@ -15,4 +15,3 @@ dependencies {
 tasks.named<Test>("test") {
 	useJUnitPlatform()
 }
-
