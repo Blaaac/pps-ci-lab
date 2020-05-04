@@ -7,7 +7,7 @@ public class HelloSaraTest{
 	public void greetingTest(){
 		String expectedGreeting = "hello sara";
 		HelloSara hs = new HelloSara(expectedGreeting);
-		actualGreeting = hs.greet();
+		String actualGreeting = hs.greet();
 		assertEquals(expectedGreeting, actualGreeting);
 	}
 }
