@@ -1,17 +1,40 @@
 plugins {
     java
     scala
- }
+    jacoco
+}
+
+
+jacoco {
+    toolVersion = "0.8.5"
+    reportsDir = file("$buildDir/customJacocoReportDir")
+}
+
+
+
 repositories {
     mavenCentral()
 }
+
 dependencies {
-	implementation("org.scala-lang:scala-library:+")
-	testImplementation("org.junit.jupiter:junit-jupiter-api:+")
-	testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:+")
+    implementation("org.scala-lang:scala-library:2.13.1")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.1.0")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.1.0")
 }
 
-// Enables JUnit Platform (needed for JUnit 5)
-tasks.named<Test>("test") {
-	useJUnitPlatform()
+
+tasks.jacocoTestReport {
+    reports {
+        xml.isEnabled = true
+        xml.destination = file("${buildDir}/reports/jacoco/report.xml")
+        html.isEnabled = false
+        csv.isEnabled = false
+    }
 }
+
+
+
+tasks.named<Test>("test"){
+    useJUnitPlatform()
+}
+
